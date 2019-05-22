@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="123.88392857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Solo GameVC-->
         <scene sceneID="h8D-LC-1QT">
             <objects>
-                <viewController id="3C3-xX-UbB" sceneMemberID="viewController">
+                <viewController id="3C3-xX-UbB" customClass="SoloGameVC" customModule="Hangman_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wZ3-AK-lUe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

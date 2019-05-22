@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1102E2A122959A2100B8CA23 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102E2A022959A2100B8CA23 /* OptionsVC.swift */; };
 		1102E2A32295B99F00B8CA23 /* OptionsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102E2A22295B99F00B8CA23 /* OptionsControl.swift */; };
+		1102E2A52295C9D200B8CA23 /* SoloGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */; };
+		1102E2A72295D6B000B8CA23 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1102E2A62295D6B000B8CA23 /* logo.png */; };
 		117E9D4F2286DE0B009E4112 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E9D4E2286DE0B009E4112 /* AppDelegate.swift */; };
 		117E9D512286DE0B009E4112 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E9D502286DE0B009E4112 /* MainMenu.swift */; };
 		117E9D542286DE0B009E4112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117E9D522286DE0B009E4112 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		1102E2A022959A2100B8CA23 /* OptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		1102E2A22295B99F00B8CA23 /* OptionsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsControl.swift; sourceTree = "<group>"; };
+		1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloGameVC.swift; sourceTree = "<group>"; };
+		1102E2A62295D6B000B8CA23 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		117E9D4B2286DE0B009E4112 /* Hangman App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hangman App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		117E9D4E2286DE0B009E4112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117E9D502286DE0B009E4112 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				117E9D772286F794009E4112 /* Constraints.swift */,
 				1102E2A022959A2100B8CA23 /* OptionsVC.swift */,
 				1102E2A22295B99F00B8CA23 /* OptionsControl.swift */,
+				1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */,
 			);
 			path = "Hangman App";
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 				117E9D632286EFAD009E4112 /* seventh.png */,
 				117E9D682286EFAD009E4112 /* sixth.png */,
 				117E9D692286EFAD009E4112 /* third.png */,
+				1102E2A62295D6B000B8CA23 /* logo.png */,
 			);
 			path = "Hangman Images";
 			sourceTree = "<group>";
@@ -177,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1102E2A72295D6B000B8CA23 /* logo.png in Resources */,
 				117E9D592286DE0C009E4112 /* LaunchScreen.storyboard in Resources */,
 				117E9D732286EFAD009E4112 /* first.png in Resources */,
 				117E9D722286EFAD009E4112 /* third.png in Resources */,
@@ -204,6 +211,7 @@
 				117E9D782286F794009E4112 /* Constraints.swift in Sources */,
 				117E9D512286DE0B009E4112 /* MainMenu.swift in Sources */,
 				117E9D762286F4BA009E4112 /* Colors.swift in Sources */,
+				1102E2A52295C9D200B8CA23 /* SoloGameVC.swift in Sources */,
 				117E9D4F2286DE0B009E4112 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
