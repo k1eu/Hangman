@@ -44,12 +44,16 @@ class OptionsVC: UIViewController {
         let passedData = updateData(segmented: sender)
         uploadData(passedData: passedData, keyForSave: "language")
         setLanguage()
+        setSegmentedControlsLanguage()
+        setSegmentedControlsDictionary()
+        setSegmentedControlsTheme()
         print(passedData)
     }
     @IBAction func dictionaryAction(_ sender: UISegmentedControl) {
         let passedData = updateData(segmented: sender)
         uploadData(passedData: passedData, keyForSave: "dictionary")
         print(passedData)
+        setSegmentedControlsDictionary()
     }
     @IBAction func themeAction(_ sender: UISegmentedControl) {
         let passedData = updateData(segmented: sender)
@@ -71,49 +75,99 @@ class OptionsVC: UIViewController {
     }
         //Setting Segmented Controls on launch
     func setSegmentedControlsLanguage () {
-        let firstData = defaults.string(forKey: "language") ?? "English"
-        if firstData == "Polish" || firstData == "Polski" {
-            let secondData = "English"
-            languageSc.setTitle(firstData, forSegmentAt: 0)
-            languageSc.setTitle(secondData, forSegmentAt: 1)
+        let checkData = defaults.string(forKey: "language") ?? "English"
+        if checkData == "Polish" || checkData == "Polski" {
+            let firstData = "Polski"
+            let secondData = "Angielski"
+            languageSc.setTitle(secondData, forSegmentAt: 0)
+            languageSc.setTitle(firstData, forSegmentAt: 1)
+            languageSc.selectedSegmentIndex = 1
             
         }
         else {
+            let firstData = "English"
             let secondData = "Polish"
             languageSc.setTitle(firstData, forSegmentAt: 0)
             languageSc.setTitle(secondData, forSegmentAt: 1)
+            languageSc.selectedSegmentIndex = 0
         }
     
     }
     
     func setSegmentedControlsDictionary () {
-        let firstData = defaults.string(forKey: "dictionary") ?? "English"
-        if firstData == "Polish" || firstData == "Polski" {
-            let secondData = "English"
-            dictionarySc.setTitle(firstData, forSegmentAt: 0)
-            dictionarySc.setTitle(secondData, forSegmentAt: 1)
-            
+        let checkData = defaults.string(forKey: "dictionary") ?? "English"
+        let checkLang = defaults.string(forKey: "language") ?? "English"
+        if checkData == "Polish" || checkData == "Polski" {
+            if checkLang == "Polish" || checkLang == "Polski" {
+                let firstData = "Angielski"
+                let secondData = "Polski"
+                dictionarySc.setTitle(firstData, forSegmentAt: 0)
+                dictionarySc.setTitle(secondData, forSegmentAt: 1)
+                
+            }
+            else {
+                let firstData = "English"
+                let secondData = "Polish"
+                dictionarySc.setTitle(firstData, forSegmentAt: 0)
+                dictionarySc.setTitle(secondData, forSegmentAt: 1)
+            }
+            dictionarySc.selectedSegmentIndex = 1
         }
+            
         else {
-            let secondData = "Polish"
-            dictionarySc.setTitle(firstData, forSegmentAt: 0)
-            dictionarySc.setTitle(secondData, forSegmentAt: 1)
+            if checkLang == "Polish" || checkLang == "Polski" {
+                let firstData = "Angielski"
+                let secondData = "Polski"
+                dictionarySc.setTitle(firstData, forSegmentAt: 0)
+                dictionarySc.setTitle(secondData, forSegmentAt: 1)
+                
+            }
+            else {
+                let firstData = "English"
+                let secondData = "Polish"
+                dictionarySc.setTitle(firstData, forSegmentAt: 0)
+                dictionarySc.setTitle(secondData, forSegmentAt: 1)
+            }
+            dictionarySc.selectedSegmentIndex = 0
         }
         
     }
     
     func setSegmentedControlsTheme () {
-        let firstData = defaults.string(forKey: "theme") ?? "Light"
-        if firstData == "Dark" || firstData == "Ciemny" {
-            let secondData = "Light"
-            themeSc.setTitle(firstData, forSegmentAt: 0)
-            themeSc.setTitle(secondData, forSegmentAt: 1)
-            
+        let checkData = defaults.string(forKey: "theme") ?? "Light"
+        let checkLang = defaults.string(forKey: "language") ?? "English"
+        if checkData == "Light" || checkData == "Jasny" {
+            if checkLang == "Polish" || checkLang == "Polski" {
+                let firstData = "Jasny"
+                let secondData = "Ciemny"
+                themeSc.setTitle(firstData, forSegmentAt: 0)
+                themeSc.setTitle(secondData, forSegmentAt: 1)
+                
+            }
+            else {
+                let firstData = "Light"
+                let secondData = "Dark"
+                themeSc.setTitle(firstData, forSegmentAt: 0)
+                themeSc.setTitle(secondData, forSegmentAt: 1)
+            }
+            themeSc.selectedSegmentIndex = 0
         }
+            
         else {
-            let secondData = "Dark"
-            themeSc.setTitle(firstData, forSegmentAt: 0)
-            themeSc.setTitle(secondData, forSegmentAt: 1)
+            if checkLang == "Polish" || checkLang == "Polski" {
+                let firstData = "Jasny"
+                let secondData = "Ciemny"
+                themeSc.setTitle(firstData, forSegmentAt: 0)
+                themeSc.setTitle(secondData, forSegmentAt: 1)
+                
+            }
+            else {
+                let firstData = "Light"
+                let secondData = "Dark"
+                themeSc.setTitle(firstData, forSegmentAt: 0)
+                themeSc.setTitle(secondData, forSegmentAt: 1)
+            }
+            themeSc.selectedSegmentIndex = 1
         }
     }
     
