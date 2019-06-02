@@ -27,6 +27,10 @@
 		117E9D742286EFAD009E4112 /* fifth.png in Resources */ = {isa = PBXBuildFile; fileRef = 117E9D6B2286EFAD009E4112 /* fifth.png */; };
 		117E9D762286F4BA009E4112 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E9D752286F4BA009E4112 /* Colors.swift */; };
 		117E9D782286F794009E4112 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E9D772286F794009E4112 /* Constraints.swift */; };
+		1199093222A402B300DC6E9E /* dictionaryPL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1199093022A402B300DC6E9E /* dictionaryPL.txt */; };
+		1199093322A402B300DC6E9E /* dictionaryUS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1199093122A402B300DC6E9E /* dictionaryUS.txt */; };
+		1199093522A402FC00DC6E9E /* gameSetUps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199093422A402FC00DC6E9E /* gameSetUps.swift */; };
+		1199093722A4030600DC6E9E /* dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199093622A4030600DC6E9E /* dictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +38,7 @@
 		1102E2A22295B99F00B8CA23 /* OptionsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsControl.swift; sourceTree = "<group>"; };
 		1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloGameVC.swift; sourceTree = "<group>"; };
 		1102E2A62295D6B000B8CA23 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		117E9D4B2286DE0B009E4112 /* Hangman App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hangman App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117E9D4B2286DE0B009E4112 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117E9D4E2286DE0B009E4112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117E9D502286DE0B009E4112 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		117E9D532286DE0B009E4112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +56,10 @@
 		117E9D6B2286EFAD009E4112 /* fifth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifth.png; sourceTree = "<group>"; };
 		117E9D752286F4BA009E4112 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		117E9D772286F794009E4112 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		1199093022A402B300DC6E9E /* dictionaryPL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionaryPL.txt; sourceTree = "<group>"; };
+		1199093122A402B300DC6E9E /* dictionaryUS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionaryUS.txt; sourceTree = "<group>"; };
+		1199093422A402FC00DC6E9E /* gameSetUps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameSetUps.swift; sourceTree = "<group>"; };
+		1199093622A4030600DC6E9E /* dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +84,7 @@
 		117E9D4C2286DE0B009E4112 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				117E9D4B2286DE0B009E4112 /* Hangman App.app */,
+				117E9D4B2286DE0B009E4112 /* Hangman.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +104,8 @@
 				117E9D772286F794009E4112 /* Constraints.swift */,
 				1102E2A022959A2100B8CA23 /* OptionsVC.swift */,
 				1102E2A22295B99F00B8CA23 /* OptionsControl.swift */,
+				1199093422A402FC00DC6E9E /* gameSetUps.swift */,
+				1199093622A4030600DC6E9E /* dictionary.swift */,
 				1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */,
 			);
 			path = "Hangman App";
@@ -121,6 +131,8 @@
 		117E9D792286FA83009E4112 /* Words Dictionaries */ = {
 			isa = PBXGroup;
 			children = (
+				1199093022A402B300DC6E9E /* dictionaryPL.txt */,
+				1199093122A402B300DC6E9E /* dictionaryUS.txt */,
 			);
 			path = "Words Dictionaries";
 			sourceTree = "<group>";
@@ -128,9 +140,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		117E9D4A2286DE0B009E4112 /* Hangman App */ = {
+		117E9D4A2286DE0B009E4112 /* Hangman */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 117E9D5D2286DE0C009E4112 /* Build configuration list for PBXNativeTarget "Hangman App" */;
+			buildConfigurationList = 117E9D5D2286DE0C009E4112 /* Build configuration list for PBXNativeTarget "Hangman" */;
 			buildPhases = (
 				117E9D472286DE0B009E4112 /* Sources */,
 				117E9D482286DE0B009E4112 /* Frameworks */,
@@ -140,9 +152,9 @@
 			);
 			dependencies = (
 			);
-			name = "Hangman App";
+			name = Hangman;
 			productName = "Hangman App";
-			productReference = 117E9D4B2286DE0B009E4112 /* Hangman App.app */;
+			productReference = 117E9D4B2286DE0B009E4112 /* Hangman.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +172,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 117E9D462286DE0B009E4112 /* Build configuration list for PBXProject "Hangman App" */;
+			buildConfigurationList = 117E9D462286DE0B009E4112 /* Build configuration list for PBXProject "Hangman" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -173,7 +185,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				117E9D4A2286DE0B009E4112 /* Hangman App */,
+				117E9D4A2286DE0B009E4112 /* Hangman */,
 			);
 		};
 /* End PBXProject section */
@@ -186,7 +198,9 @@
 				1102E2A72295D6B000B8CA23 /* logo.png in Resources */,
 				117E9D592286DE0C009E4112 /* LaunchScreen.storyboard in Resources */,
 				117E9D732286EFAD009E4112 /* first.png in Resources */,
+				1199093322A402B300DC6E9E /* dictionaryUS.txt in Resources */,
 				117E9D722286EFAD009E4112 /* third.png in Resources */,
+				1199093222A402B300DC6E9E /* dictionaryPL.txt in Resources */,
 				117E9D712286EFAD009E4112 /* sixth.png in Resources */,
 				117E9D702286EFAD009E4112 /* second.png in Resources */,
 				117E9D562286DE0C009E4112 /* Assets.xcassets in Resources */,
@@ -206,7 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1199093722A4030600DC6E9E /* dictionary.swift in Sources */,
 				1102E2A32295B99F00B8CA23 /* OptionsControl.swift in Sources */,
+				1199093522A402FC00DC6E9E /* gameSetUps.swift in Sources */,
 				1102E2A122959A2100B8CA23 /* OptionsVC.swift in Sources */,
 				117E9D782286F794009E4112 /* Constraints.swift in Sources */,
 				117E9D512286DE0B009E4112 /* MainMenu.swift in Sources */,
@@ -393,7 +409,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		117E9D462286DE0B009E4112 /* Build configuration list for PBXProject "Hangman App" */ = {
+		117E9D462286DE0B009E4112 /* Build configuration list for PBXProject "Hangman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				117E9D5B2286DE0C009E4112 /* Debug */,
@@ -402,7 +418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		117E9D5D2286DE0C009E4112 /* Build configuration list for PBXNativeTarget "Hangman App" */ = {
+		117E9D5D2286DE0C009E4112 /* Build configuration list for PBXNativeTarget "Hangman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				117E9D5E2286DE0C009E4112 /* Debug */,

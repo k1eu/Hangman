@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Hangman App.xcodeproj">
+      location = "self:/Users/kieu/Library/Xcode Saves/Hangman/Hangman.xcodeproj">
    </FileRef>
 </Workspace>

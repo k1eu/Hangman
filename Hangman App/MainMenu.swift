@@ -35,9 +35,9 @@ class ViewController: UIViewController {
     // Functions
     
     func adjustLanguage() {
-        let chosenLanguage = defaults.string(forKey: "language")
-        print(chosenLanguage!)
-        if chosenLanguage! == "Polish" || chosenLanguage == "Polski" {
+        let chosenLanguage = defaults.string(forKey: "language") ?? "English"
+        print(chosenLanguage)
+        if chosenLanguage == "Polish" || chosenLanguage == "Polski" {
             
             playButton.setTitle("Graj Teraz!", for: .normal)
             twoPlayerButton.setTitle("Graj 1v1", for: .normal)
