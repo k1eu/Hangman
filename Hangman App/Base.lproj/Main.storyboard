@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hangman_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,14 +106,13 @@
         <!--Solo GameVC-->
         <scene sceneID="h8D-LC-1QT">
             <objects>
-                <viewController id="3C3-xX-UbB" customClass="SoloGameVC" customModule="Hangman_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3C3-xX-UbB" customClass="SoloGameVC" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wZ3-AK-lUe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a letter" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6t4-JU-beb">
-                                <rect key="frame" x="156" y="573" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a letter" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6t4-JU-beb">
+                                <rect key="frame" x="155" y="540.5" width="104.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -121,15 +120,24 @@
                                     <action selector="textInWordField:" destination="3C3-xX-UbB" eventType="editingDidEnd" id="jqh-7E-GHc"/>
                                 </connections>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mls-s6-nxz">
-                                <rect key="frame" x="87" y="301" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mls-s6-nxz">
+                                <rect key="frame" x="94.5" y="285.5" width="225" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mls-s6-nxz" secondAttribute="height" multiplier="1:1" id="Jpz-74-bh5"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mls-s6-nxz" firstAttribute="centerX" secondItem="wZ3-AK-lUe" secondAttribute="centerX" id="Egx-8n-u3v"/>
+                            <constraint firstItem="6t4-JU-beb" firstAttribute="top" secondItem="mls-s6-nxz" secondAttribute="bottom" constant="30" id="I3I-2J-Hn8"/>
+                            <constraint firstItem="mls-s6-nxz" firstAttribute="centerY" secondItem="wZ3-AK-lUe" secondAttribute="centerY" constant="-50" id="ahY-Rl-epq"/>
+                            <constraint firstItem="6t4-JU-beb" firstAttribute="centerX" secondItem="wZ3-AK-lUe" secondAttribute="centerX" id="c2R-fT-nca"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5EH-j4-PDj"/>
                     </view>
                     <connections>
+                        <outlet property="gameImagesField" destination="mls-s6-nxz" id="805-pi-OSB"/>
                         <outlet property="wordField" destination="6t4-JU-beb" id="Fzc-5k-cPD"/>
                     </connections>
                 </viewController>
@@ -140,7 +148,7 @@
         <!--OptionsVC-->
         <scene sceneID="3j7-tX-645">
             <objects>
-                <viewController id="MAh-Qk-NaI" customClass="OptionsVC" customModule="Hangman_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MAh-Qk-NaI" customClass="OptionsVC" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gU4-bb-TDO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

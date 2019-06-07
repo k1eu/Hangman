@@ -16,9 +16,21 @@ class SoloGameVC: UIViewController, UITextFieldDelegate {
     var theWord:String = ""
     var separatedWord : [String] = []
     var checkCharacter : String = ""
+    var imagesNames : [String] = [
+        "first","second","third",
+        "fourth","fifth","sixth",
+        "seventh","eighth","nineth"
+    ]
+    var lineOneHorizontalStack = UIStackView()
+    var lineTwoHorizontalStack = UIStackView()
+    var lineThreeHorizontalStack = UIStackView()
+    var lineFourHorizontalStack = UIStackView()
+    var verticalStack = UIStackView()
+    var mistakeCounter : Int = 0
+    
     // Outlets
     @IBOutlet weak var wordField: UITextField!
-    @IBOutlet weak var confirmButtonOutlet: UIButton!
+    @IBOutlet weak var gameImagesField: UIImageView!
     
     // Main
     override func viewDidLoad() {
@@ -27,6 +39,7 @@ class SoloGameVC: UIViewController, UITextFieldDelegate {
         adjustDictionary()
         self.hideKeyboardWhenTappedAround()
         wordField.delegate = self
+        setUpStackView()
     }
     // Actions
     @IBAction func textInWordField(_ sender: UITextField) {
@@ -38,8 +51,9 @@ class SoloGameVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         checkCharacter = wordField.text ?? ""
-        print(checkCharacter ?? "")
+        print(checkCharacter)
         wordField.text = ""
+        checkIfContains()
         return false
     }
         //MAXIMUM NUMBER OF CHARACTERS IN TEXTFIELD == 1

@@ -44,6 +44,7 @@ extension SoloGameVC {
             print(separatedWord)
         }
     }
+    
 }
 
 extension UIViewController {
