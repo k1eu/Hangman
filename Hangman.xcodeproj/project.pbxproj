@@ -31,6 +31,8 @@
 		1199093322A402B300DC6E9E /* dictionaryUS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1199093122A402B300DC6E9E /* dictionaryUS.txt */; };
 		1199093522A402FC00DC6E9E /* gameSetUps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199093422A402FC00DC6E9E /* gameSetUps.swift */; };
 		1199093722A4030600DC6E9E /* dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199093622A4030600DC6E9E /* dictionary.swift */; };
+		11CBA89922AC270E00EF1D77 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CBA89822AC270E00EF1D77 /* Player.swift */; };
+		11CBA89B22AC288A00EF1D77 /* WonOrLost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CBA89A22AC288A00EF1D77 /* WonOrLost.swift */; };
 		11FB0F6622AADD7A005350EE /* Core Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FB0F6522AADD7A005350EE /* Core Functions.swift */; };
 		11FB0F6822AAE8A7005350EE /* Stack Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FB0F6722AAE8A7005350EE /* Stack Views.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		1199093122A402B300DC6E9E /* dictionaryUS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionaryUS.txt; sourceTree = "<group>"; };
 		1199093422A402FC00DC6E9E /* gameSetUps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameSetUps.swift; sourceTree = "<group>"; };
 		1199093622A4030600DC6E9E /* dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dictionary.swift; sourceTree = "<group>"; };
+		11CBA89822AC270E00EF1D77 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		11CBA89A22AC288A00EF1D77 /* WonOrLost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonOrLost.swift; sourceTree = "<group>"; };
 		11FB0F6522AADD7A005350EE /* Core Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core Functions.swift"; sourceTree = "<group>"; };
 		11FB0F6722AAE8A7005350EE /* Stack Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stack Views.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +100,7 @@
 		117E9D4D2286DE0B009E4112 /* Hangman App */ = {
 			isa = PBXGroup;
 			children = (
+				11CBA89722AC26F700EF1D77 /* Player */,
 				11FB0F6422AADCA4005350EE /* Single Player */,
 				117E9D792286FA83009E4112 /* Words Dictionaries */,
 				117E9D622286EF79009E4112 /* Hangman Images */,
@@ -141,12 +146,21 @@
 			path = "Words Dictionaries";
 			sourceTree = "<group>";
 		};
+		11CBA89722AC26F700EF1D77 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				11CBA89822AC270E00EF1D77 /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		11FB0F6422AADCA4005350EE /* Single Player */ = {
 			isa = PBXGroup;
 			children = (
 				1199093422A402FC00DC6E9E /* gameSetUps.swift */,
 				11FB0F6522AADD7A005350EE /* Core Functions.swift */,
 				11FB0F6722AAE8A7005350EE /* Stack Views.swift */,
+				11CBA89A22AC288A00EF1D77 /* WonOrLost.swift */,
 			);
 			path = "Single Player";
 			sourceTree = "<group>";
@@ -238,10 +252,12 @@
 				1102E2A32295B99F00B8CA23 /* OptionsControl.swift in Sources */,
 				1199093522A402FC00DC6E9E /* gameSetUps.swift in Sources */,
 				11FB0F6822AAE8A7005350EE /* Stack Views.swift in Sources */,
+				11CBA89922AC270E00EF1D77 /* Player.swift in Sources */,
 				1102E2A122959A2100B8CA23 /* OptionsVC.swift in Sources */,
 				117E9D782286F794009E4112 /* Constraints.swift in Sources */,
 				117E9D512286DE0B009E4112 /* MainMenu.swift in Sources */,
 				117E9D762286F4BA009E4112 /* Colors.swift in Sources */,
+				11CBA89B22AC288A00EF1D77 /* WonOrLost.swift in Sources */,
 				11FB0F6622AADD7A005350EE /* Core Functions.swift in Sources */,
 				1102E2A52295C9D200B8CA23 /* SoloGameVC.swift in Sources */,
 				117E9D4F2286DE0B009E4112 /* AppDelegate.swift in Sources */,

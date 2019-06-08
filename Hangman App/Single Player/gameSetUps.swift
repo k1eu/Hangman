@@ -27,7 +27,7 @@ extension SoloGameVC {
     }
     
     func adjustDictionary () {
-        let checkLanguage = defaults.string(forKey: "language")
+        let checkLanguage = defaults.string(forKey: "dictionary")
         if checkLanguage == "Polski" || checkLanguage == "Polish"
         {
             dictionary.executePolishDictionary()

@@ -27,6 +27,7 @@ class SoloGameVC: UIViewController, UITextFieldDelegate {
     var lineFourHorizontalStack = UIStackView()
     var verticalStack = UIStackView()
     var mistakeCounter : Int = 0
+    var winOrLoose = CheckIfWonOrLost()
     
     // Outlets
     @IBOutlet weak var wordField: UITextField!

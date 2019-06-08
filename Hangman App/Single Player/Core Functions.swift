@@ -10,7 +10,24 @@ import UIKit
 
 extension SoloGameVC {
     func checkIfContains() {
+        
+        let checkIfLost = winOrLoose.ifLost(mistakePoints: mistakeCounter)
+        let checkIfWon = winOrLoose.ifWon(firstStack: lineOneHorizontalStack, secondStack: lineTwoHorizontalStack, thirdStack: lineThreeHorizontalStack, wordCharacters: separatedWord)
+        print("WCHODZI")
+        if checkIfLost == true || checkIfWon == true {
+            if checkIfWon == true {
+                print("won")
+            }
+            if checkIfLost == true {
+                print("lost")
+            }
+            
+        }
+        
+        else {
+            
         if theWord.contains(checkCharacter) {
+            
             let temporaryIndexes = createIndexes(contains: checkCharacter)
             print(temporaryIndexes)
             for element in temporaryIndexes {
@@ -32,6 +49,15 @@ extension SoloGameVC {
         else {
             addMistake()
         }
+        let checkIfLostAfterPlay = winOrLoose.ifLost(mistakePoints: mistakeCounter)
+        let checkIfWonAfterPlay = winOrLoose.ifWon(firstStack: lineOneHorizontalStack, secondStack: lineTwoHorizontalStack, thirdStack: lineThreeHorizontalStack, wordCharacters: separatedWord)
+        if checkIfWonAfterPlay == true {
+                print("won")
+            }
+        if checkIfLostAfterPlay == true {
+                print("lost")
+            }
+        } 
     }
     
     func createIndexes(contains: String)->[Int] {
@@ -39,6 +65,7 @@ extension SoloGameVC {
         for number in 0..<separatedWord.count {
             if separatedWord[number] == checkCharacter {
                 array.append(number)
+                print("dodano pozycje \(number)")
             }
         }
         return array
@@ -49,6 +76,17 @@ extension SoloGameVC {
     func addMistake() {
         mistakeCounter += 1
         gameImagesField.image = UIImage(named: imagesNames[mistakeCounter])
+    }
+    
+    func won() {
+        hideThings()
+    }
+    
+    func loose() {
+        hideThings()
+    }
+    func hideThings() {
+        wordField.isHidden = true
     }
     
 }
