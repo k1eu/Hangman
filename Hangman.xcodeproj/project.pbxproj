@@ -10,9 +10,13 @@
 		1102E2A122959A2100B8CA23 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102E2A022959A2100B8CA23 /* OptionsVC.swift */; };
 		1102E2A32295B99F00B8CA23 /* OptionsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102E2A22295B99F00B8CA23 /* OptionsControl.swift */; };
 		1102E2A52295C9D200B8CA23 /* SoloGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */; };
-		1102E2A72295D6B000B8CA23 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1102E2A62295D6B000B8CA23 /* logo.png */; };
 		11586EA422AD0AAB000B71D2 /* Win.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11586EA322AD0AAB000B71D2 /* Win.swift */; };
 		11586EA822AD1CCE000B71D2 /* End View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11586EA722AD1CCE000B71D2 /* End View.swift */; };
+		11586EAA22AD2C31000B71D2 /* ImageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11586EA922AD2C31000B71D2 /* ImageColor.swift */; };
+		11586EAC22AD3260000B71D2 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 11586EAB22AD3260000B71D2 /* logo.png */; };
+		11586EAF22AD32F4000B71D2 /* Adjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11586EAE22AD32F4000B71D2 /* Adjustments.swift */; };
+		11586EB122AD331D000B71D2 /* Sayings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11586EB022AD331D000B71D2 /* Sayings.swift */; };
+		11586EB322AD39DB000B71D2 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 11586EB222AD39DB000B71D2 /* launch.png */; };
 		117E9D4F2286DE0B009E4112 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E9D4E2286DE0B009E4112 /* AppDelegate.swift */; };
 		117E9D512286DE0B009E4112 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E9D502286DE0B009E4112 /* MainMenu.swift */; };
 		117E9D542286DE0B009E4112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117E9D522286DE0B009E4112 /* Main.storyboard */; };
@@ -43,9 +47,13 @@
 		1102E2A022959A2100B8CA23 /* OptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		1102E2A22295B99F00B8CA23 /* OptionsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsControl.swift; sourceTree = "<group>"; };
 		1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloGameVC.swift; sourceTree = "<group>"; };
-		1102E2A62295D6B000B8CA23 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		11586EA322AD0AAB000B71D2 /* Win.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Win.swift; sourceTree = "<group>"; };
 		11586EA722AD1CCE000B71D2 /* End View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "End View.swift"; sourceTree = "<group>"; };
+		11586EA922AD2C31000B71D2 /* ImageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageColor.swift; sourceTree = "<group>"; };
+		11586EAB22AD3260000B71D2 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		11586EAE22AD32F4000B71D2 /* Adjustments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjustments.swift; sourceTree = "<group>"; };
+		11586EB022AD331D000B71D2 /* Sayings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sayings.swift; sourceTree = "<group>"; };
+		11586EB222AD39DB000B71D2 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		117E9D4B2286DE0B009E4112 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117E9D4E2286DE0B009E4112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117E9D502286DE0B009E4112 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 			children = (
 				117E9D752286F4BA009E4112 /* Colors.swift */,
 				117E9D772286F794009E4112 /* Constraints.swift */,
+				11586EA922AD2C31000B71D2 /* ImageColor.swift */,
 			);
 			path = "Appwide Setups";
 			sourceTree = "<group>";
@@ -126,6 +135,15 @@
 			path = "Account stats";
 			sourceTree = "<group>";
 		};
+		11586EAD22AD32DE000B71D2 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				11586EAE22AD32F4000B71D2 /* Adjustments.swift */,
+				11586EB022AD331D000B71D2 /* Sayings.swift */,
+			);
+			path = "Main Menu";
+			sourceTree = "<group>";
+		};
 		117E9D422286DE0B009E4112 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +163,7 @@
 		117E9D4D2286DE0B009E4112 /* Hangman App */ = {
 			isa = PBXGroup;
 			children = (
+				11586EAD22AD32DE000B71D2 /* Main Menu */,
 				11586EA622AD196F000B71D2 /* Account stats */,
 				11586EA522AD1967000B71D2 /* Leaderboard */,
 				11586EA222AD0A10000B71D2 /* ViewControllers */,
@@ -175,7 +194,8 @@
 				117E9D632286EFAD009E4112 /* seventh.png */,
 				117E9D682286EFAD009E4112 /* sixth.png */,
 				117E9D692286EFAD009E4112 /* third.png */,
-				1102E2A62295D6B000B8CA23 /* logo.png */,
+				11586EAB22AD3260000B71D2 /* logo.png */,
+				11586EB222AD39DB000B71D2 /* launch.png */,
 			);
 			path = "Hangman Images";
 			sourceTree = "<group>";
@@ -269,7 +289,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1102E2A72295D6B000B8CA23 /* logo.png in Resources */,
 				117E9D592286DE0C009E4112 /* LaunchScreen.storyboard in Resources */,
 				117E9D732286EFAD009E4112 /* first.png in Resources */,
 				1199093322A402B300DC6E9E /* dictionaryUS.txt in Resources */,
@@ -278,9 +297,11 @@
 				117E9D712286EFAD009E4112 /* sixth.png in Resources */,
 				117E9D702286EFAD009E4112 /* second.png in Resources */,
 				117E9D562286DE0C009E4112 /* Assets.xcassets in Resources */,
+				11586EB322AD39DB000B71D2 /* launch.png in Resources */,
 				117E9D542286DE0B009E4112 /* Main.storyboard in Resources */,
 				117E9D6D2286EFAD009E4112 /* fourth.png in Resources */,
 				117E9D6C2286EFAD009E4112 /* seventh.png in Resources */,
+				11586EAC22AD3260000B71D2 /* logo.png in Resources */,
 				117E9D742286EFAD009E4112 /* fifth.png in Resources */,
 				117E9D6E2286EFAD009E4112 /* nineth.png in Resources */,
 				117E9D6F2286EFAD009E4112 /* eighth.png in Resources */,
@@ -302,11 +323,14 @@
 				11CBA89922AC270E00EF1D77 /* Player.swift in Sources */,
 				1102E2A122959A2100B8CA23 /* OptionsVC.swift in Sources */,
 				117E9D782286F794009E4112 /* Constraints.swift in Sources */,
+				11586EAF22AD32F4000B71D2 /* Adjustments.swift in Sources */,
 				117E9D512286DE0B009E4112 /* MainMenu.swift in Sources */,
 				117E9D762286F4BA009E4112 /* Colors.swift in Sources */,
 				11CBA89B22AC288A00EF1D77 /* WonOrLost.swift in Sources */,
+				11586EB122AD331D000B71D2 /* Sayings.swift in Sources */,
 				11FB0F6622AADD7A005350EE /* Core Functions.swift in Sources */,
 				1102E2A52295C9D200B8CA23 /* SoloGameVC.swift in Sources */,
+				11586EAA22AD2C31000B71D2 /* ImageColor.swift in Sources */,
 				11586EA422AD0AAB000B71D2 /* Win.swift in Sources */,
 				117E9D4F2286DE0B009E4112 /* AppDelegate.swift in Sources */,
 			);

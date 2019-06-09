@@ -16,10 +16,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var twoPlayerButton: UIButton!
     @IBOutlet weak var optionsButton: UIButton!
+    @IBOutlet weak var sayingsLabel: UILabel!
     // Constants and variables
     let colors = Colors()
     let constraints = Constraints()
     let defaults = UserDefaults.standard
+    let sayings = Sayings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,56 +33,20 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         adjustTheme()
         adjustLanguage()
+        rollTheSayings()
     }
     // Functions
     
-    func adjustLanguage() {
-        let chosenLanguage = defaults.string(forKey: "language") ?? "English"
-        print(chosenLanguage)
-        if chosenLanguage == "Polish" || chosenLanguage == "Polski" {
-            
-            playButton.setTitle("Graj Teraz!", for: .normal)
-            twoPlayerButton.setTitle("Graj 1v1", for: .normal)
-            optionsButton.setTitle("Opcje", for: .normal)
-            print("dziala?")
+    func rollTheSayings() {
+        let checkLanguage = defaults.string(forKey: "language")
+        if checkLanguage == "Polski" || checkLanguage == "Polish" {
+            sayingsLabel.text = sayings.sayingsPolish.randomElement()
         }
         else {
-            playButton.setTitle("Play now!", for: .normal)
-            twoPlayerButton.setTitle("Play 1v1", for: .normal)
-            optionsButton.setTitle("Options", for: .normal)
-        }
-    }
-    func adjustTheme() {
-        let chosenTheme = defaults.string(forKey: "theme")
-        view.backgroundColor = .clear
-        print(chosenTheme)
-        if chosenTheme == "Jasny" || chosenTheme == "Light" {
-            setBackgroundColor(color: colors.lightTheme)
-            setLabels(color: colors.lightThemeLabel)
-            setButtonsBackground(color: colors.lightThemeButton)
-        }
-        else {
-            setBackgroundColor(color: colors.darkTheme)
-            setLabels(color: colors.darkThemeLabel)
-            setButtonsBackground(color: colors.darkThemeButton)
+           sayingsLabel.text = sayings.sayingsEnglish.randomElement()
         }
     }
     
-    func setBackgroundColor(color:UIColor) {
-        view.backgroundColor = color
-    }
-    
-    func setLabels(color:UIColor) {
-        titleLabel.textColor = color
-        playButton.setTitleColor(color, for: .normal)
-        twoPlayerButton.setTitleColor(color, for: .normal)
-        optionsButton.setTitleColor(color, for: .normal)
-    }
-    func setButtonsBackground(color:UIColor) {
-        playButton.backgroundColor = color
-        twoPlayerButton.backgroundColor = color
-        optionsButton.backgroundColor = color
-    }
     // Actions
 }
 

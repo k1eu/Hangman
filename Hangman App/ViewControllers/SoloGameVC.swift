@@ -86,11 +86,4 @@ class SoloGameVC: UIViewController, UITextFieldDelegate {
     
 }
 
-extension UIImageView {
-    func setImageColor(color: UIColor) {
-        let tymczasowyObraz = self.image?.withRenderingMode(.alwaysTemplate)
-        self.image = tymczasowyObraz
-        self.tintColor = color
-    }
-}
 
