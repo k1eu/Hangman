@@ -13,8 +13,8 @@ class CheckIfWonOrLost {
     
     func ifLost (mistakePoints : Int)->Bool {
         if mistakePoints >= 8 {
-            return true
             print("you loose")
+            return true
         }
         else {
             return false
@@ -24,7 +24,6 @@ class CheckIfWonOrLost {
     func ifWon(firstStack : UIStackView,secondStack: UIStackView, thirdStack: UIStackView, wordCharacters : [String]) -> Bool {
         
         let wordLength = wordCharacters.count
-        var checkIfWon = false
         var testValues : [Bool] = []
         
         // KROTKIE SLOWA

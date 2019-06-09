@@ -81,6 +81,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11586EA022AD09C9000B71D2 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				1102E2A22295B99F00B8CA23 /* OptionsControl.swift */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		11586EA122AD09F6000B71D2 /* Appwide Setups */ = {
+			isa = PBXGroup;
+			children = (
+				117E9D752286F4BA009E4112 /* Colors.swift */,
+				117E9D772286F794009E4112 /* Constraints.swift */,
+			);
+			path = "Appwide Setups";
+			sourceTree = "<group>";
+		};
+		11586EA222AD0A10000B71D2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				117E9D502286DE0B009E4112 /* MainMenu.swift */,
+				1102E2A022959A2100B8CA23 /* OptionsVC.swift */,
+				1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		117E9D422286DE0B009E4112 = {
 			isa = PBXGroup;
 			children = (
@@ -100,22 +127,18 @@
 		117E9D4D2286DE0B009E4112 /* Hangman App */ = {
 			isa = PBXGroup;
 			children = (
+				11586EA222AD0A10000B71D2 /* ViewControllers */,
+				11586EA122AD09F6000B71D2 /* Appwide Setups */,
+				11586EA022AD09C9000B71D2 /* Options */,
 				11CBA89722AC26F700EF1D77 /* Player */,
 				11FB0F6422AADCA4005350EE /* Single Player */,
 				117E9D792286FA83009E4112 /* Words Dictionaries */,
 				117E9D622286EF79009E4112 /* Hangman Images */,
 				117E9D4E2286DE0B009E4112 /* AppDelegate.swift */,
-				117E9D502286DE0B009E4112 /* MainMenu.swift */,
 				117E9D522286DE0B009E4112 /* Main.storyboard */,
 				117E9D552286DE0C009E4112 /* Assets.xcassets */,
 				117E9D572286DE0C009E4112 /* LaunchScreen.storyboard */,
 				117E9D5A2286DE0C009E4112 /* Info.plist */,
-				117E9D752286F4BA009E4112 /* Colors.swift */,
-				117E9D772286F794009E4112 /* Constraints.swift */,
-				1102E2A022959A2100B8CA23 /* OptionsVC.swift */,
-				1102E2A22295B99F00B8CA23 /* OptionsControl.swift */,
-				1199093622A4030600DC6E9E /* dictionary.swift */,
-				1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */,
 			);
 			path = "Hangman App";
 			sourceTree = "<group>";
@@ -140,6 +163,7 @@
 		117E9D792286FA83009E4112 /* Words Dictionaries */ = {
 			isa = PBXGroup;
 			children = (
+				1199093622A4030600DC6E9E /* dictionary.swift */,
 				1199093022A402B300DC6E9E /* dictionaryPL.txt */,
 				1199093122A402B300DC6E9E /* dictionaryUS.txt */,
 			);
