@@ -24,14 +24,20 @@ class SoloGameVC: UIViewController, UITextFieldDelegate {
     var lineOneHorizontalStack = UIStackView()
     var lineTwoHorizontalStack = UIStackView()
     var lineThreeHorizontalStack = UIStackView()
-    var lineFourHorizontalStack = UIStackView()
-    var verticalStack = UIStackView()
     var mistakeCounter : Int = 0
+    var points = 10
     var winOrLoose = CheckIfWonOrLost()
+    
     
     // Outlets
     @IBOutlet weak var wordField: UITextField!
     @IBOutlet weak var gameImagesField: UIImageView!
+    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var winLooseLabel: UILabel!
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var nextRoundButton: UIButton!
+    @IBOutlet weak var endGameStack: UIStackView!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     // Main
     override func viewDidLoad() {
@@ -47,6 +53,14 @@ class SoloGameVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func submitAction(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func nextAction(_ sender: UIButton) {
+    }
+    @IBAction func menuAction(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     // Functions
         //WHAT TO DO ON RETURN
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -70,5 +84,13 @@ class SoloGameVC: UIViewController, UITextFieldDelegate {
     
     
     
+}
+
+extension UIImageView {
+    func setImageColor(color: UIColor) {
+        let tymczasowyObraz = self.image?.withRenderingMode(.alwaysTemplate)
+        self.image = tymczasowyObraz
+        self.tintColor = color
+    }
 }
 

@@ -111,8 +111,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a letter" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6t4-JU-beb">
-                                <rect key="frame" x="108" y="389" width="104.5" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a letter" textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6t4-JU-beb">
+                                <rect key="frame" x="108" y="314" width="104.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -120,26 +120,91 @@
                                     <action selector="textInWordField:" destination="3C3-xX-UbB" eventType="editingDidEnd" id="jqh-7E-GHc"/>
                                 </connections>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mls-s6-nxz">
-                                <rect key="frame" x="35" y="109" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mls-s6-nxz">
+                                <rect key="frame" x="35" y="34" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="DdG-bw-Snk"/>
                                     <constraint firstAttribute="width" secondItem="mls-s6-nxz" secondAttribute="height" multiplier="1:1" id="Jpz-74-bh5"/>
                                     <constraint firstAttribute="height" constant="250" id="bKn-J1-ISG"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOe-yp-h8q">
+                                <rect key="frame" x="15" y="21" width="43" height="37"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuAction:" destination="3C3-xX-UbB" eventType="touchUpInside" id="TJ1-au-H0w"/>
+                                </connections>
+                            </button>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="u0b-Bv-ovQ">
+                                <rect key="frame" x="81" y="367" width="185" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Won" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRA-kU-F2m">
+                                        <rect key="frame" x="47" y="30" width="91.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huX-40-bTL">
+                                        <rect key="frame" x="46" y="95" width="93.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nFn-uM-TK8">
+                                        <rect key="frame" x="10" y="150" width="165" height="46"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3g-2Q-43v">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="46"/>
+                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                                <inset key="imageEdgeInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="submitAction:" destination="3C3-xX-UbB" eventType="touchUpInside" id="IqY-9S-32Z"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jN-w7-jk8">
+                                                <rect key="frame" x="89" y="0.0" width="76" height="46"/>
+                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextAction:" destination="3C3-xX-UbB" eventType="touchUpInside" id="pui-ty-Zzk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="oOe-yp-h8q" firstAttribute="leading" secondItem="5EH-j4-PDj" secondAttribute="leading" constant="15" id="0r4-Ot-OcM"/>
+                            <constraint firstItem="oOe-yp-h8q" firstAttribute="top" secondItem="5EH-j4-PDj" secondAttribute="top" constant="1" id="989-RR-fsO"/>
                             <constraint firstItem="mls-s6-nxz" firstAttribute="centerX" secondItem="wZ3-AK-lUe" secondAttribute="centerX" id="Egx-8n-u3v"/>
                             <constraint firstItem="6t4-JU-beb" firstAttribute="top" secondItem="mls-s6-nxz" secondAttribute="bottom" constant="30" id="I3I-2J-Hn8"/>
-                            <constraint firstItem="mls-s6-nxz" firstAttribute="centerY" secondItem="wZ3-AK-lUe" secondAttribute="centerY" constant="-50" id="ahY-Rl-epq"/>
+                            <constraint firstItem="mls-s6-nxz" firstAttribute="centerY" secondItem="wZ3-AK-lUe" secondAttribute="centerY" constant="-125" id="ahY-Rl-epq"/>
                             <constraint firstItem="6t4-JU-beb" firstAttribute="centerX" secondItem="wZ3-AK-lUe" secondAttribute="centerX" id="c2R-fT-nca"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5EH-j4-PDj"/>
                     </view>
                     <connections>
+                        <outlet property="endGameStack" destination="u0b-Bv-ovQ" id="633-iZ-vXL"/>
                         <outlet property="gameImagesField" destination="mls-s6-nxz" id="805-pi-OSB"/>
+                        <outlet property="menuButton" destination="oOe-yp-h8q" id="EUJ-bH-abc"/>
+                        <outlet property="nextRoundButton" destination="4jN-w7-jk8" id="Gle-dc-Vra"/>
+                        <outlet property="scoreLabel" destination="huX-40-bTL" id="dCS-GE-eAy"/>
+                        <outlet property="submitButton" destination="c3g-2Q-43v" id="Gvf-Gm-DfF"/>
+                        <outlet property="winLooseLabel" destination="yRA-kU-F2m" id="gC0-Xy-WUt"/>
                         <outlet property="wordField" destination="6t4-JU-beb" id="Fzc-5k-cPD"/>
                     </connections>
                 </viewController>

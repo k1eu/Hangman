@@ -9,8 +9,7 @@
 import UIKit
 
 class CheckIfWonOrLost {
-    
-    
+    let defaults = UserDefaults.standard
     func ifLost (mistakePoints : Int)->Bool {
         if mistakePoints >= 8 {
             print("you loose")
@@ -103,5 +102,9 @@ class CheckIfWonOrLost {
             
         }
         return temporaryBoolean
+    }
+    
+    func hideThings() {
+        
     }
 }

@@ -11,20 +11,6 @@ import UIKit
 extension SoloGameVC {
     func checkIfContains() {
         
-        let checkIfLost = winOrLoose.ifLost(mistakePoints: mistakeCounter)
-        let checkIfWon = winOrLoose.ifWon(firstStack: lineOneHorizontalStack, secondStack: lineTwoHorizontalStack, thirdStack: lineThreeHorizontalStack, wordCharacters: separatedWord)
-        print("WCHODZI")
-        if checkIfLost == true || checkIfWon == true {
-            if checkIfWon == true {
-                print("won")
-            }
-            if checkIfLost == true {
-                print("lost")
-            }
-            
-        }
-        
-        else {
             
         if theWord.contains(checkCharacter) {
             
@@ -52,12 +38,13 @@ extension SoloGameVC {
         let checkIfLostAfterPlay = winOrLoose.ifLost(mistakePoints: mistakeCounter)
         let checkIfWonAfterPlay = winOrLoose.ifWon(firstStack: lineOneHorizontalStack, secondStack: lineTwoHorizontalStack, thirdStack: lineThreeHorizontalStack, wordCharacters: separatedWord)
         if checkIfWonAfterPlay == true {
-                print("won")
+            print("won")
+            winOrLoose.executeWin(imagesField: gameImagesField, textField: wordField, endStack: endGameStack, view: view)
+            winOrLoose.configureEndScreen(titleLabel: winLooseLabel, scoreLabel: scoreLabel, submitButton: submitButton, nextButton: nextRoundButton, points: points)
             }
         if checkIfLostAfterPlay == true {
-                print("lost")
+            print("lost")
             }
-        } 
     }
     
     func createIndexes(contains: String)->[Int] {
@@ -69,13 +56,15 @@ extension SoloGameVC {
             }
         }
         return array
-     /*   return separatedWord.enumerated().compactMap {
-            $0.element == contains ? $0.offset : nil
-        } */
     }
     func addMistake() {
+        let checkTheme = defaults.string(forKey: "theme")
         mistakeCounter += 1
         gameImagesField.image = UIImage(named: imagesNames[mistakeCounter])
+        if checkTheme == "Dark" || checkTheme == "Ciemny" {
+            gameImagesField.setImageColor(color: .white)
+        }
+        
     }
     
     func won() {

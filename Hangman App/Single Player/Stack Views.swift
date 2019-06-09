@@ -103,10 +103,17 @@ extension SoloGameVC {
     }
     func editLabelInStack(label: UILabel) {
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .red
         label.textAlignment = .center
         // label.widthAnchor.constraint(equalToConstant: 40).isActive = true
         //label.heightAnchor.constraint(equalToConstant: 40).isActive = true
         label.font = label.font.withSize(40)
+        let checkTheme = defaults.string(forKey: "theme")
+        if checkTheme == "Jasny" || checkTheme == "Light" {
+            setTextColorLightMode(label: label)
+        }
+        else {
+            setTextColorDarkMode(label: label)
+        }
     }
+    
 }

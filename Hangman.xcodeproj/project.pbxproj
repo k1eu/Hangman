@@ -11,6 +11,8 @@
 		1102E2A32295B99F00B8CA23 /* OptionsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102E2A22295B99F00B8CA23 /* OptionsControl.swift */; };
 		1102E2A52295C9D200B8CA23 /* SoloGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */; };
 		1102E2A72295D6B000B8CA23 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1102E2A62295D6B000B8CA23 /* logo.png */; };
+		11586EA422AD0AAB000B71D2 /* Win.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11586EA322AD0AAB000B71D2 /* Win.swift */; };
+		11586EA822AD1CCE000B71D2 /* End View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11586EA722AD1CCE000B71D2 /* End View.swift */; };
 		117E9D4F2286DE0B009E4112 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E9D4E2286DE0B009E4112 /* AppDelegate.swift */; };
 		117E9D512286DE0B009E4112 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E9D502286DE0B009E4112 /* MainMenu.swift */; };
 		117E9D542286DE0B009E4112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117E9D522286DE0B009E4112 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		1102E2A22295B99F00B8CA23 /* OptionsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsControl.swift; sourceTree = "<group>"; };
 		1102E2A42295C9D200B8CA23 /* SoloGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloGameVC.swift; sourceTree = "<group>"; };
 		1102E2A62295D6B000B8CA23 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		11586EA322AD0AAB000B71D2 /* Win.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Win.swift; sourceTree = "<group>"; };
+		11586EA722AD1CCE000B71D2 /* End View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "End View.swift"; sourceTree = "<group>"; };
 		117E9D4B2286DE0B009E4112 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117E9D4E2286DE0B009E4112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117E9D502286DE0B009E4112 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -108,6 +112,20 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		11586EA522AD1967000B71D2 /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Leaderboard;
+			sourceTree = "<group>";
+		};
+		11586EA622AD196F000B71D2 /* Account stats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Account stats";
+			sourceTree = "<group>";
+		};
 		117E9D422286DE0B009E4112 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +145,8 @@
 		117E9D4D2286DE0B009E4112 /* Hangman App */ = {
 			isa = PBXGroup;
 			children = (
+				11586EA622AD196F000B71D2 /* Account stats */,
+				11586EA522AD1967000B71D2 /* Leaderboard */,
 				11586EA222AD0A10000B71D2 /* ViewControllers */,
 				11586EA122AD09F6000B71D2 /* Appwide Setups */,
 				11586EA022AD09C9000B71D2 /* Options */,
@@ -185,6 +205,8 @@
 				11FB0F6522AADD7A005350EE /* Core Functions.swift */,
 				11FB0F6722AAE8A7005350EE /* Stack Views.swift */,
 				11CBA89A22AC288A00EF1D77 /* WonOrLost.swift */,
+				11586EA322AD0AAB000B71D2 /* Win.swift */,
+				11586EA722AD1CCE000B71D2 /* End View.swift */,
 			);
 			path = "Single Player";
 			sourceTree = "<group>";
@@ -272,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11586EA822AD1CCE000B71D2 /* End View.swift in Sources */,
 				1199093722A4030600DC6E9E /* dictionary.swift in Sources */,
 				1102E2A32295B99F00B8CA23 /* OptionsControl.swift in Sources */,
 				1199093522A402FC00DC6E9E /* gameSetUps.swift in Sources */,
@@ -284,6 +307,7 @@
 				11CBA89B22AC288A00EF1D77 /* WonOrLost.swift in Sources */,
 				11FB0F6622AADD7A005350EE /* Core Functions.swift in Sources */,
 				1102E2A52295C9D200B8CA23 /* SoloGameVC.swift in Sources */,
+				11586EA422AD0AAB000B71D2 /* Win.swift in Sources */,
 				117E9D4F2286DE0B009E4112 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
