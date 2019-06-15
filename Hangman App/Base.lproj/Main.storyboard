@@ -83,6 +83,41 @@
                                     <constraint firstAttribute="width" secondItem="f0D-cO-dez" secondAttribute="height" multiplier="1:1" id="z6f-d0-jpQ"/>
                                 </constraints>
                             </imageView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="K4u-hw-SrB">
+                                <rect key="frame" x="40" y="212" width="240" height="144"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Login!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mu3-jK-eqc">
+                                        <rect key="frame" x="69" y="17" width="102" height="29"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDd-Pz-mtt">
+                                        <rect key="frame" x="30" y="57.5" width="180" height="30"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epQ-zj-y0O">
+                                        <rect key="frame" x="88" y="99" width="64" height="37"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                        <state key="normal" title="Set Nick">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitNick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C29-B3-8xk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CDd-Pz-mtt" firstAttribute="leading" secondItem="K4u-hw-SrB" secondAttribute="leading" constant="30" id="QCf-73-VAv"/>
+                                    <constraint firstAttribute="trailing" secondItem="CDd-Pz-mtt" secondAttribute="trailing" constant="30" id="YNU-8T-LdT"/>
+                                    <constraint firstAttribute="width" secondItem="K4u-hw-SrB" secondAttribute="height" multiplier="2:1.2" id="fPc-3e-42X"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="17" leading="8" bottom="8" trailing="8"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -92,15 +127,23 @@
                             <constraint firstItem="F05-kf-tR5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RiN-6j-Nmm"/>
                             <constraint firstItem="nRt-V7-J4P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vis-Yc-cZ9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F05-kf-tR5" secondAttribute="bottom" constant="40" id="WEd-yz-rWJ"/>
+                            <constraint firstItem="K4u-hw-SrB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XeE-CU-B1Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K4u-hw-SrB" secondAttribute="trailing" constant="40" id="ZoL-TJ-Nzx"/>
+                            <constraint firstItem="K4u-hw-SrB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bCo-eN-kEF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F05-kf-tR5" secondAttribute="trailing" constant="20" id="c53-hk-It1"/>
                             <constraint firstItem="EUM-MS-Xsq" firstAttribute="top" secondItem="f0D-cO-dez" secondAttribute="bottom" constant="30" id="eIa-Ps-Z3S"/>
                             <constraint firstItem="nRt-V7-J4P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="ekh-Je-Jkw"/>
                             <constraint firstItem="f0D-cO-dez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fi4-Lc-S0B"/>
                             <constraint firstItem="f0D-cO-dez" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="lKa-fy-I81"/>
+                            <constraint firstItem="K4u-hw-SrB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="pzz-lO-pzI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loginLabel" destination="Mu3-jK-eqc" id="cRK-dl-hQA"/>
+                        <outlet property="nickField" destination="CDd-Pz-mtt" id="4Qo-RD-L48"/>
+                        <outlet property="nickSubmit" destination="epQ-zj-y0O" id="VoC-iv-mAQ"/>
+                        <outlet property="nicknameStack" destination="K4u-hw-SrB" id="heO-VF-jjW"/>
                         <outlet property="optionsButton" destination="oB5-YU-8A1" id="cxX-cQ-9HT"/>
                         <outlet property="playButton" destination="hX8-t4-glJ" id="hfV-uG-1lT"/>
                         <outlet property="sayingsLabel" destination="EUM-MS-Xsq" id="mgU-b2-JyW"/>

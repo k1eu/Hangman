@@ -34,13 +34,14 @@ extension ViewController {
             setBackgroundColor(color: colors.lightTheme)
             setLabels(color: colors.lightThemeLabel)
             setButtonsBackground(color: colors.lightThemeButton)
+            titleLogo.setImageColor(color: colors.lightThemeLabel)
             
         }
         else {
             setBackgroundColor(color: colors.darkTheme)
             setLabels(color: colors.darkThemeLabel)
             setButtonsBackground(color: colors.darkThemeButton)
-            titleLogo.setImageColor(color: .white)
+            titleLogo.setImageColor(color: colors.darkThemeLabel)
         }
     }
     

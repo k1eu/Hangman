@@ -11,12 +11,16 @@ import UIKit
 
 class ViewController: UIViewController {
     // Outlets
+    @IBOutlet weak var nicknameStack: UIStackView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nickSubmit: UIButton!
     @IBOutlet weak var titleLogo: UIImageView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var twoPlayerButton: UIButton!
     @IBOutlet weak var optionsButton: UIButton!
     @IBOutlet weak var sayingsLabel: UILabel!
+    @IBOutlet weak var nickField: UITextField!
+    @IBOutlet weak var loginLabel: UILabel!
     // Constants and variables
     let colors = Colors()
     let constraints = Constraints()
@@ -28,6 +32,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         constraints.setUpMenuButtons(playButton: playButton, twoPlayerButton: twoPlayerButton, optionsButton: optionsButton)
+        
+        firstLogin()
+        setSubmitButtonState()
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -48,5 +56,9 @@ class ViewController: UIViewController {
     }
     
     // Actions
+    @IBAction func submitNick(_ sender: UIButton) {
+        setNick(sender: nickField)
+        print(defaults.string(forKey: "nickname"))
+    }
 }
 

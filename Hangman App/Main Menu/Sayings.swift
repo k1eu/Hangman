@@ -10,12 +10,12 @@ import UIKit
 
 class Sayings {
     let sayingsEnglish : [String] =
-    [
-    "Don't let me dooown", "Guess and let me live. Plox.",
-    "I don't feel so good Mr.Stark", "I have nine lives, like a cat",
-    "I feel I'll die with you", "What is love?! Baby don't hurt me",
-    "-Not Today ~ Hangman Stark", "How abot not playing today?",
-    "You look smart, maybe i'll live"
+        [
+        "Don't let me dooown", "Guess and let me live. Plox.",
+        "I don't feel so good Mr.Stark", "I have nine lives, like a cat",
+        "I feel I'll die with you", "What is love?! Baby don't hurt me",
+        "-Not Today ~ Hangman Stark", "How abot not playing today?",
+        "You look smart, maybe i'll live"
     ]
     let sayingsPolish : [String] =
         [

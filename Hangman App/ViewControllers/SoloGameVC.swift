@@ -53,9 +53,7 @@ class SoloGameVC: UIViewController, UITextFieldDelegate {
         
     }
     
-    @IBAction func submitAction(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
+    
     @IBAction func nextAction(_ sender: UIButton) {
     }
     @IBAction func menuAction(_ sender: UIButton) {

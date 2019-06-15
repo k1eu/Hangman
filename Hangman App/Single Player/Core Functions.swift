@@ -40,10 +40,12 @@ extension SoloGameVC {
         if checkIfWonAfterPlay == true {
             print("won")
             winOrLoose.executeWin(imagesField: gameImagesField, textField: wordField, endStack: endGameStack, view: view)
-            winOrLoose.configureEndScreen(titleLabel: winLooseLabel, scoreLabel: scoreLabel, submitButton: submitButton, nextButton: nextRoundButton, points: points)
+            winOrLoose.configureEndScreenWon(titleLabel: winLooseLabel, scoreLabel: scoreLabel, submitButton: submitButton, nextButton: nextRoundButton, points: points)
             }
         if checkIfLostAfterPlay == true {
             print("lost")
+            winOrLoose.executeLost(imagesField: gameImagesField, textField: wordField, endStack: endGameStack, view: view)
+            winOrLoose.configureEndScreenLost(titleLabel: winLooseLabel, scoreLabel: scoreLabel, submitButton: submitButton, nextButton: nextRoundButton, points: points)
             }
     }
     
