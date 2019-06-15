@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     // Outlets
     @IBOutlet weak var nicknameStack: UIStackView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -26,15 +26,17 @@ class ViewController: UIViewController {
     let constraints = Constraints()
     let defaults = UserDefaults.standard
     let sayings = Sayings()
+    let blackView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        nickField.text = ""
         constraints.setUpMenuButtons(playButton: playButton, twoPlayerButton: twoPlayerButton, optionsButton: optionsButton)
-        
+        nickField.delegate = self
         firstLogin()
         setSubmitButtonState()
+        self.hideKeyboardWhenTappedAround()
         
         
     }
@@ -55,10 +57,24 @@ class ViewController: UIViewController {
         }
     }
     
+    //WHAT TO DO ON RETURN
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     // Actions
     @IBAction func submitNick(_ sender: UIButton) {
-        setNick(sender: nickField)
-        print(defaults.string(forKey: "nickname"))
+        if nickField.text == "" {
+            loginLabel.text = "try again"
+        }
+        else {
+            setNick(sender: nickField)
+            print(defaults.string(forKey: "nickname"))
+            dismissStack()
+        }
+        
+        
     }
 }
 

@@ -11,8 +11,8 @@ import UIKit
 
 extension ViewController {
     
+    
     func firstLogin() {
-        let blackView = UIView()
         blackView.backgroundColor = UIColor(white: 0, alpha: 0.66)
         view.addSubview(blackView)
         blackView.frame = view.frame
@@ -59,7 +59,7 @@ extension ViewController {
     
     @objc func textFieldIsNotEmpty(sender: UITextField) {
         let text = nickField.text ?? ""
-        if text == "" || text == nil || text == "Nickname" {
+        if text == "" || text == nil || text == "Nickname" || nickField.isEditing == false {
             nickSubmit.isEnabled = false
         }
         else {
@@ -70,6 +70,12 @@ extension ViewController {
     func setNick(sender: UITextField) {
         defaults.set(sender.text, forKey: "nickname")
     }
+    
+    func dismissStack() {
+        nicknameStack.isHidden = true
+        blackView.removeFromSuperview()
+    }
+    
     
     
 }
