@@ -13,8 +13,9 @@ extension SoloGameVC {
         
             
         if theWord.contains(checkCharacter) {
-            
             let temporaryIndexes = createIndexes(contains: checkCharacter)
+            let counter = temporaryIndexes.count * 2
+            points += counter
             print(temporaryIndexes)
             for element in temporaryIndexes {
                 if element < 6 {
@@ -30,10 +31,12 @@ extension SoloGameVC {
                     labelInStack.text = checkCharacter
                 }
             }
-            
+            updatePoints()
         }
         else {
             addMistake()
+            points -= 1
+            updatePoints()
         }
         let checkIfLostAfterPlay = winOrLoose.ifLost(mistakePoints: mistakeCounter)
         let checkIfWonAfterPlay = winOrLoose.ifWon(firstStack: lineOneHorizontalStack, secondStack: lineTwoHorizontalStack, thirdStack: lineThreeHorizontalStack, wordCharacters: separatedWord)
@@ -67,6 +70,16 @@ extension SoloGameVC {
             gameImagesField.setImageColor(color: .white)
         }
         
+    }
+    
+    func updatePoints() {
+        let getLanguage = defaults.string(forKey: "Language")
+        if getLanguage == "Polski" || getLanguage == "Polish" {
+            pointsLbl.text = "Punkty:\(points)"
+        }
+        else {
+            pointsLbl.text = "Points:\(points)"
+        }
     }
     
     func won() {

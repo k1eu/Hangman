@@ -13,15 +13,22 @@ extension ViewController {
     
     
     func firstLogin() {
-        blackView.backgroundColor = UIColor(white: 0, alpha: 0.66)
-        view.addSubview(blackView)
-        blackView.frame = view.frame
-        view.bringSubviewToFront(nicknameStack)
         
         
         if defaults.bool(forKey: "firstLaunch") == false {
+            blackView.backgroundColor = UIColor(white: 0, alpha: 0.66)
+            view.addSubview(blackView)
+            blackView.frame = view.frame
+            view.bringSubviewToFront(nicknameStack)
+            
+            var temp_arrString : [String] = []
+            var temp_arrInt : [Int] = []
             hideThingsMainScreen()
             configureStack(nickStack: nicknameStack)
+            defaults.set(true, forKey: "firstLaunch")
+            defaults.set(temp_arrString, forKey: "leaderboardNames")
+            defaults.set(temp_arrString, forKey: "leaderboardDictionaries")
+            defaults.set(temp_arrInt, forKey: "leaderboardPoints")
         }
     }
     

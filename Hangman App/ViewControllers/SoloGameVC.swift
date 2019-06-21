@@ -38,12 +38,14 @@ class SoloGameVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nextRoundButton: UIButton!
     @IBOutlet weak var endGameStack: UIStackView!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var pointsLbl: UILabel!
     
     // Main
     override func viewDidLoad() {
         super.viewDidLoad()
         adjustTheme()
         adjustDictionary()
+        adjustLanguage()
         self.hideKeyboardWhenTappedAround()
         wordField.delegate = self
         setUpStackView()

@@ -12,11 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let defaults = UserDefaults.standard
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // Override point for customization after application launch.
+        if defaults.string(forKey: "Language") == nil {
+            defaults.set("English", forKey: "Language")
+        }
+        if defaults.string(forKey: "Dictionary") == nil {
+            defaults.set("English", forKey: "Dictionary")
+        }
+        if defaults.string(forKey: "Theme") == nil {
+            defaults.set("Light", forKey: "Theme")
+        }
+        
         return true
     }
 

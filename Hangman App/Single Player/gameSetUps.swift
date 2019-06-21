@@ -13,15 +13,19 @@ extension SoloGameVC {
     func setBackgroundColor (color:UIColor) {
         view.backgroundColor = color
     }
-    func adjustLanguage () {
+    func adjustLanguage() {
         let chosenLanguage = defaults.string(forKey: "language")
         if chosenLanguage == "Polski" || chosenLanguage == "Polish" {
             let fieldText = "Wprowadz literę"
-            wordField.text = fieldText
+            let pointsText = "Punkty:\(points)"
+            wordField.placeholder = fieldText
+            pointsLbl.text = pointsText
         }
         else {
             let fieldText = "Enter a letter"
-            wordField.text = fieldText
+            let pointsText = "Points:\(points)"
+            wordField.placeholder = fieldText
+            pointsLbl.text = pointsText
         }
     }
     func adjustTheme () {
@@ -35,11 +39,12 @@ extension SoloGameVC {
         if checkTheme == "Jasny" || checkTheme == "Light" {
             setBackgroundColor(color: colors.lightTheme)
             menuButton.setTitleColor(colors.lightThemeLabel, for: .normal)
+            pointsLbl.textColor = colors.lightThemeLabel
         }
         else {
             setBackgroundColor(color: colors.darkTheme)
             menuButton.setTitleColor(colors.darkThemeLabel, for: .normal)
-            
+            pointsLbl.textColor = colors.darkThemeLabel
             
         }
     }

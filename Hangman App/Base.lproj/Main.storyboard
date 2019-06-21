@@ -238,6 +238,12 @@
                                 </subviews>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrZ-TX-3Ml">
+                                <rect key="frame" x="261.5" y="21" width="43.5" height="19"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -245,6 +251,8 @@
                             <constraint firstItem="oOe-yp-h8q" firstAttribute="top" secondItem="5EH-j4-PDj" secondAttribute="top" constant="1" id="989-RR-fsO"/>
                             <constraint firstItem="mls-s6-nxz" firstAttribute="centerX" secondItem="wZ3-AK-lUe" secondAttribute="centerX" id="Egx-8n-u3v"/>
                             <constraint firstItem="6t4-JU-beb" firstAttribute="top" secondItem="mls-s6-nxz" secondAttribute="bottom" constant="30" id="I3I-2J-Hn8"/>
+                            <constraint firstItem="5EH-j4-PDj" firstAttribute="trailing" secondItem="BrZ-TX-3Ml" secondAttribute="trailing" constant="15" id="IbS-cW-6zf"/>
+                            <constraint firstItem="BrZ-TX-3Ml" firstAttribute="top" secondItem="5EH-j4-PDj" secondAttribute="top" constant="1" id="UIE-Kz-huS"/>
                             <constraint firstItem="mls-s6-nxz" firstAttribute="centerY" secondItem="wZ3-AK-lUe" secondAttribute="centerY" constant="-125" id="ahY-Rl-epq"/>
                             <constraint firstItem="6t4-JU-beb" firstAttribute="centerX" secondItem="wZ3-AK-lUe" secondAttribute="centerX" id="c2R-fT-nca"/>
                         </constraints>
@@ -255,6 +263,7 @@
                         <outlet property="gameImagesField" destination="mls-s6-nxz" id="805-pi-OSB"/>
                         <outlet property="menuButton" destination="oOe-yp-h8q" id="EUJ-bH-abc"/>
                         <outlet property="nextRoundButton" destination="4jN-w7-jk8" id="Gle-dc-Vra"/>
+                        <outlet property="pointsLbl" destination="BrZ-TX-3Ml" id="XH5-Ga-xMy"/>
                         <outlet property="scoreLabel" destination="huX-40-bTL" id="dCS-GE-eAy"/>
                         <outlet property="submitButton" destination="c3g-2Q-43v" id="Gvf-Gm-DfF"/>
                         <outlet property="winLooseLabel" destination="yRA-kU-F2m" id="gC0-Xy-WUt"/>
