@@ -26,6 +26,7 @@ extension CheckIfWonOrLost {
             scoreLabel.text = scoreText
             submitButton.setTitle(submitText, for: .normal)
             nextButton.setTitle(nextText, for: .normal)
+            nextButton.isHidden = false
         }
         else {
             let scoreText = "Score: \(points)"
@@ -37,6 +38,7 @@ extension CheckIfWonOrLost {
             scoreLabel.text = scoreText
             submitButton.setTitle(submitText, for: .normal)
             nextButton.setTitle(nextText, for: .normal)
+            nextButton.isHidden = false
         }
         
     }

@@ -103,8 +103,5 @@ class CheckIfWonOrLost {
         }
         return temporaryBoolean
     }
-    
-    func hideThings() {
-        
-    }
+
 }
