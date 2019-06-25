@@ -27,7 +27,7 @@ extension ViewController {
         }
     }
     func adjustTheme() {
-        let chosenTheme = defaults.string(forKey: "theme")
+        let chosenTheme = defaults.string(forKey: "Theme")
         view.backgroundColor = .clear
         print(chosenTheme)
         if chosenTheme == "Jasny" || chosenTheme == "Light" {

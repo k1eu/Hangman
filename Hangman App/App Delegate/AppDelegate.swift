@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        if defaults.string(forKey: "Language") == nil {
+        if defaults.string(forKey: "Language") == nil || defaults.string(forKey: "Language") == ""  {
             defaults.set("English", forKey: "Language")
         }
-        if defaults.string(forKey: "Dictionary") == nil {
+        if defaults.string(forKey: "Dictionary") == nil || defaults.string(forKey: "Dictionary") == "" {
             defaults.set("English", forKey: "Dictionary")
         }
-        if defaults.string(forKey: "Theme") == nil {
+        if defaults.string(forKey: "Theme") == nil || defaults.string(forKey: "Theme") == ""  {
             defaults.set("Light", forKey: "Theme")
         }
         

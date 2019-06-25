@@ -40,11 +40,10 @@ extension SoloGameVC {
         defaults.set(getPoints, forKey: "leaderboardPoints")
         defaults.set(getDictionaries, forKey: "leaderboardDictionaries")
         
+        }
         print(defaults.array(forKey: "leaderboardNames")!)
         print(defaults.array(forKey: "leaderboardPoints")!)
         print(defaults.array(forKey: "leaderboardDictionaries")!)
-        
-        }
         dismiss(animated: true, completion: nil)
         
     }

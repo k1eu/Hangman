@@ -51,7 +51,7 @@ extension OptionsVC {
         else {
             setLabelColors(color: colors.darkThemeLabel)
             setBackgroundColor(color: colors.darkTheme)
-            setSegmentedColors(color: .white)
+            setSegmentedColors(color: .black)
         }
     }
     
